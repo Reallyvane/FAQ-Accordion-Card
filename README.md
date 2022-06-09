@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-faq-accordion-card-using-grid-css-b0Hj_ebEwl)
+- Live Site URL: [Vercel](https://faq-accordion-card-nesdevs.vercel.app)
 
 ## My process
 
