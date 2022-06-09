@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "a b";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: white;
+  height: 510px;
+  width: 920px;
+  border-radius: 20px;
+}
+
+.illustration {
+  position: relative;
+  display: block;
+  grid-area: "a";
+}
+
+.img-1 {
+  position: absolute;
+  top: 40%;
+  left: -20%;
+  z-index: 2;
+}
+
+.img-2 {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  z-index: 1;
+}
+
+.img-3 {
+  position: absolute;
+  right: 5%;
+  width: 120%;
+  z-index: 0;
+}
+
+.img-4 {
+  display: none;
+}
+
+.content {
+  grid-area: "b";
+  margin: 10%;
+  height: auto;
+}
+
+.content-sections {
+  margin-top: 5%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+  margin-left: 3%;
+}
+
+details {
+  display: block;
+  padding: 1rem;
+}
+
+details:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+details > summary::after {
+  content: url(./images/icon-arrow-down.svg);
+  transition: transform 0.1s;
+}
+
+details[open] > summary {
+  font-weight: 700;
+}
+
+details[open] > summary::after {
+  content: url(./images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+}
+
+summary {
+  font-size: 1.2rem;
+}
+
+p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  color: var(--dark-grayish-blue);
+}
+
+hr {
+  background-color: var(--light-grayish-blue);
+  border: none;
+  height: 1px;
+  margin-left: 3%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    grid-template-areas:
+      "a"
+      "b";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    height: auto;
+    margin: 0% 5%;
+  }
+
+  .illustration {
+    grid-area: "a";
+  }
+
+  .content {
+    grid-area: "b";
+  }
+
+  .img-1 {
+    position: absolute;
+    top: -30%;
+    left: 15%;
+    width: 25%;
+    z-index: 2;
+  }
+
+  .img-2 {
+    position: absolute;
+    top: -124%;
+    right: 15%;
+    width: 70%;
+    z-index: 1;
+  }
+
+  .img-3 {
+    display: none;
+  }
+
+  .img-4 {
+    display: initial;
+    position: absolute;
+    width: 70%;
+    right: 15%;
+    top: 0%;
+    z-index: 0;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  details summary {
+    font-size: 1rem;
+  }
+}
